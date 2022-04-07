@@ -1,0 +1,43 @@
+<?php
+namespace App\Http\Livewire\RappasoftDatatable\Views\Traits\Configuration;
+
+use Closure;
+
+trait BooleanColumnConfiguration
+{
+    /**
+     * @param  Closure  $callback
+     *
+     * @return $this
+     */
+    public function setCallback(Closure $callback): self
+    {
+        $this->callback = $callback;
+
+        return $this;
+    }
+
+    /**
+     * @param  bool  $value
+     *
+     * @return $this
+     */
+    public function setSuccessValue(bool $value): self
+    {
+        $this->successValue = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param  string  $view
+     *
+     * @return $this
+     */
+    public function setView(string $view): self
+    {
+        $this->view = $view;
+
+        return $this;
+    }
+}
